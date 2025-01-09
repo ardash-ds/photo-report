@@ -1,6 +1,31 @@
-<html>
+<!doctype html>
+<html lang="ru">
     <body>
         <h1>Заголовок</h1>
         <p>Основной текст</p>
+        <img src="static/photo/{{ files[0] }}" width="800">
+        {{files}}
+
+        <form action="postdata" method="post">
+            <p>
+                Name:<br>
+                <input name="username" />
+            </p>
+            <p>
+                Age:<br>
+                <input name="userage" type="number" />
+            </p>
+            <input class="custom-radio" type="radio" id="id_payer_0" name="payer" value="SE" checked>
+            <label for="id_payer_0">отправитель</label>
+
+            <label for="languages">Выберите языки:</label>
+            <select id="languages" name="languages" multiple>
+                <option value="ru">Русский</option>
+                <option value="en">Английский</option>
+                <option value="de">Немецкий</option>
+            </select>
+
+            <input type="submit" value="Send" />
+        </form>
     </body>
 </html>

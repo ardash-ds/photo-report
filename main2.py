@@ -1,3 +1,7 @@
+from pptx import Presentation
+from pptx.util import Inches
+
+
 # Создаем объект презентации
 prs = Presentation()
 
